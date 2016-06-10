@@ -1,0 +1,26 @@
+// reset
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #f9f9f9;
+    color: #222;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 120px;
+    padding: 40px 60px;
+}
