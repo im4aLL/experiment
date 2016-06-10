@@ -1,0 +1,36 @@
+.loading {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.loading-counter {
+    display: inline-block;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.loading-counter-no {
+    font-size: 160px;
+    line-height: 1em;
+    display: inline-block;
+}
+
+.loading-counter-bar {
+    width: 190px;
+    margin: auto;
+    background: #ccc;
+    height: 5px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.loading-counter-bar-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: #222;
+    transition: width 1s;
+}
