@@ -1,6 +1,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .slide-wrapper {
@@ -11,11 +12,19 @@ html, body {
 .slide {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 0;
+
+    &.is-visible {
+        display: block;
+    }
 }
 
 .slide-content {
-    display: none;
+    
 }
 
 .slide-no {
@@ -24,12 +33,16 @@ html, body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    visibility: hidden;
+    z-index: 10;
+    display: none;
+
+    &.is-visible {
+        display: block;
+    }
 }
 
 .slide-no.is--show {
-    visibility: visible;
+    // visibility: visible;
     // animation: animateSlideNumber 2s both;
 }
 
@@ -52,8 +65,8 @@ html, body {
 
 // theme
 .slide-one {
-    // background: url('photo-1.jpg') no-repeat #c3d4e4;
-    // background-size: cover;
+    background: url('photo-1.jpg') no-repeat #c3d4e4;
+    background-size: cover;
 }
 
 .slide-two {

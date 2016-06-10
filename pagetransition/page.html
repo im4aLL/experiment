@@ -13,16 +13,16 @@
 
     <svg class="svg-defs">
         <defs>
-            <pattern id="slideonebg" patternUnits="userSpaceOnUse" width="1680" height="1125" viewbox="0 0 1680 1125">
+            <pattern id="slidebg-1" patternUnits="userSpaceOnUse" width="1680" height="1125" viewbox="0 0 1680 1125">
                 <image xlink:href="photo-1.jpg" width="1680" height="1125">
             </pattern>
-            <pattern id="slidetwobg" patternUnits="userSpaceOnUse" width="1680" height="1120" viewbox="0 0 1680 1120">
+            <pattern id="slidebg-2" patternUnits="userSpaceOnUse" width="1680" height="1120" viewbox="0 0 1680 1120">
                 <image xlink:href="photo-2.jpg" width="1680" height="1120">
             </pattern>
-            <pattern id="slidethreebg" patternUnits="userSpaceOnUse" width="1680" height="1260" viewbox="0 0 1680 1260">
+            <pattern id="slidebg-3" patternUnits="userSpaceOnUse" width="1680" height="1260" viewbox="0 0 1680 1260">
                 <image xlink:href="photo-3.jpg" width="1680" height="1260">
             </pattern>
-            <pattern id="slidefourbg" patternUnits="userSpaceOnUse" width="1680" height="1120" viewbox="0 0 1680 1120">
+            <pattern id="slidebg-4" patternUnits="userSpaceOnUse" width="1680" height="1120" viewbox="0 0 1680 1120">
                 <image xlink:href="photo-4.jpg" width="1680" height="1120">
             </pattern>
 
@@ -33,30 +33,30 @@
     </svg>
 
     <main class="slide-wrapper">
-        <span class="slide-no is--show">
+        <span class="slide-no">
             <svg width="1663" height="949">
-                <text x="0" y="1em" style="fill: url(#slideonebg)" width="135" height="135">01</text>
+                <text x="0" y="1em" style="fill: url(#slidebg-1)" width="135" height="135">01</text>
             </svg>
         </span>
 
-        <section class="slide slide-one is--active">
+        <section class="slide slide-one" data-slide="1">
             <div class="slide-content"><h1>Slide one</h1></div>
-
             <!-- <img src="photo-1.jpg" alt="" style="max-width: 100%;" class="svg-clipped">
             <style>.svg-clipped{-webkit-clip-path:url(#svgPath);clip-path:url(#svgPath);}</style> -->
         </section>
-        <!-- <section class="slide slide-two">
+        <section class="slide slide-two" data-slide="2">
             <div class="slide-content"><h1>Slide two</h1></div>
         </section>
-        <section class="slide slide-three">
+        <section class="slide slide-three" data-slide="3">
             <div class="slide-content"><h1>Slide three</h1></div>
         </section>
-        <section class="slide slide-four">
+        <section class="slide slide-four" data-slide="4">
             <div class="slide-content"><h1>Slide four</h1></div>
-        </section> -->
+        </section>
     </main>  
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
     <script src="page.js"></script>
 </body>
 </html>
