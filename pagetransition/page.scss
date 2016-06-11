@@ -1,7 +1,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .slide-wrapper {
@@ -12,10 +12,10 @@ html, body {
 .slide {
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // display: none;
     z-index: 0;
 
     &.is-visible {
@@ -24,7 +24,7 @@ html, body {
 }
 
 .slide-content {
-    
+
 }
 
 .slide-no {
@@ -65,21 +65,21 @@ html, body {
 
 // theme
 .slide-one {
-    background: url('photo-1.jpg') no-repeat #c3d4e4;
+    background: url('photo-1.jpg') no-repeat fixed #c3d4e4;
     background-size: cover;
 }
 
 .slide-two {
-    background: url('photo-2.jpg') no-repeat #655442;
+    background: url('photo-2.jpg') no-repeat fixed #655442;
     background-size: cover;
 }
 
 .slide-three {
-    background: url('photo-3.jpg') no-repeat #70aed5;
+    background: url('photo-3.jpg') no-repeat fixed #70aed5;
     background-size: cover;
 }
 
 .slide-four {
-    background: url('photo-4.jpg') no-repeat #316e44;
+    background: url('photo-4.jpg') no-repeat fixed #316e44;
     background-size: cover;
 }

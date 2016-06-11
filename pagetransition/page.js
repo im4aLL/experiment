@@ -46,9 +46,9 @@ function startSlide(slideNo){
 
 jQuery(document).ready(function($) {
     initSlideNumber();
-    startSlide();
+    // startSlide();
 
-    setTimeout(function(){ showSlideNumber(2); }, 5000);
-    setTimeout(function(){ showSlideNumber(3); }, 10000);
-    setTimeout(function(){ showSlideNumber(4); }, 15000);
+    // setTimeout(function(){ showSlideNumber(2); }, 5000);
+    // setTimeout(function(){ showSlideNumber(3); }, 10000);
+    // setTimeout(function(){ showSlideNumber(4); }, 15000);
 });
