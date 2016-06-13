@@ -23,20 +23,24 @@ function initSlideNumber() {
 
 function showSlideNumber(no) {
     $('.slide-no').addClass('is-visible');
-    timeLine = new TimelineMax();
+    timeLine = new TimelineMax({ onComplete: slideAnimationOnComplete });
     var $slide = $('[data-slide="'+no+'"]');
     $('.slide').css({ zIndex: 0 });
-    $slide.addClass('is-visible').css({ transform: 'translateY(100%)', zIndex: 2 });
+    $slide.addClass('is-visible').css({ zIndex: 2 });
 
     var $svg = $('.slide-no svg');
     var number = no.toString().length === 1 ? '0' + no.toString() : no.toString();
     $svg.find('text').css({ 'fill' : 'url(#slidebg-'+ no +')' }).html(number);
 
-    timeLine.from($svg, 1, { transform: 'translateY(100px)', alpha: 0, ease: Expo.easeOut })
-            .to($svg, 1, { transform: 'translateY(0)', alpha: 1, ease: Expo.easeOut })
-            .to($svg, 1, { transform: 'translateY(-100px)', alpha: 0, ease: Expo.easeOut });
+    timeLine
+        .set($svg, { transform: 'translateY(100px)', opacity: 0 })
+        .to($svg, 1, { transform: 'translateY(0)', alpha: 1, ease: Expo.easeOut })
+        .to($svg, 1, { transform: 'translateY(-100px)', alpha: 0, ease: Expo.easeOut });
 
-    timeLine.to($slide, 0.5, { transform: 'translateY(0)', ease: Expo.easeOut }, '-=0.8');
+    timeLine.to($slide, 0.5, { top: '0', ease: Expo.easeOut }, '-=0.8');
+
+    function slideAnimationOnComplete(){
+    }
 }
 
 function startSlide(slideNo){
@@ -46,9 +50,9 @@ function startSlide(slideNo){
 
 jQuery(document).ready(function($) {
     initSlideNumber();
-    // startSlide();
+    startSlide();
 
-    // setTimeout(function(){ showSlideNumber(2); }, 5000);
+    setTimeout(function(){ showSlideNumber(2); }, 5000);
     // setTimeout(function(){ showSlideNumber(3); }, 10000);
     // setTimeout(function(){ showSlideNumber(4); }, 15000);
 });
